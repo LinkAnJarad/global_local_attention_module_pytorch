@@ -7,7 +7,18 @@ from .global_spatial_attention import GlobalSpatialAttention
 
 
 class GLAM(nn.Module):
+    
     def __init__(self, in_channels, num_reduced_channels, feature_map_size, kernel_size):
+        '''
+        Song, C. H., Han, H. J., & Avrithis, Y. (2022). All the attention you need: Global-local, spatial-channel attention for image retrieval. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (pp. 2754-2763).
+
+        Args:
+            in_channels (int): number of channels of the input feature map
+            num_reduced_channels (int): number of channels that the local and global spatial attention modules will reduce the input feature map. Refer to figures 3 and 5 in the paper.
+            feaure_map_size (int): height/width of the feature map
+            kernel_size (int): scope of the inter-channel attention
+        '''
+        
         super().__init__()
         
         self.local_channel_att = LocalChannelAttention(feature_map_size, kernel_size)
