@@ -17,7 +17,7 @@ glam = GLAM(in_channels=32, num_reduced_channels=16, feature_map_size=8, kernel_
 
 glam(feature_maps) # shape (16, 32, 8, 8), same as input
 ```
-
+Note: *The height/width of the input feature maps must be at least 7, due to the 7x7 convolution (3x3 dilated conv) in the module.*
 ## Arguments
 
 * `in_channels (int)`: number of channels of the input feature map
