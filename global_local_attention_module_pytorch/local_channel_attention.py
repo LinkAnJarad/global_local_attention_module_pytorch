@@ -4,7 +4,7 @@ from torch import nn
 class LocalChannelAttention(nn.Module):
     def __init__(self, feature_map_size, kernel_size):
         super().__init__()
-        assert kernel_size%2 == 1
+        assert (kernel_size%2 == 1), "Kernel size must be odd"
         
         self.conv = nn.Conv1d(1, 1, kernel_size, 1, padding=(kernel_size-1)//2)
         self.GAP = nn.AvgPool2d(feature_map_size)
