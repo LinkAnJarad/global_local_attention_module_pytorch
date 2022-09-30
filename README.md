@@ -10,9 +10,10 @@ Song, C. H., Han, H. J., & Avrithis, Y. (2022). All the attention you need: Glob
 ## Usage
 
 ```python
-glam = GLAM(in_channels=32, num_reduced_channels=16, feature_map_size=8, kernel_size=5)
+from global_local_attention_module_pytorch import GLAM
 
 feature_maps = torch.randn(16, 32, 8, 8) # shape (batch_size, num_channels, height, width)
+glam = GLAM(in_channels=32, num_reduced_channels=16, feature_map_size=8, kernel_size=5)
 
 glam(feature_maps) # shape (16, 32, 8, 8), same as input
 ```
