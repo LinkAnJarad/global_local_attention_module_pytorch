@@ -1,4 +1,8 @@
 # Global-Local-Attention-Module-Pytorch
+### [This implementation is moved to this [repo](https://github.com/LinkAnJarad/Torch-Modules-Compilation)]
+
+
+
 Unoffical Implementation of the [Global Local Attention Module (GLAM)](https://arxiv.org/pdf/2107.08000.pdf) in PyTorch
 
 ![image](https://user-images.githubusercontent.com/79294502/192976117-67fa4a17-eec0-4dda-987d-3c1fc2ffe554.png)
